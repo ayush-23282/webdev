@@ -1,0 +1,38 @@
+const quiz = [
+  { question: "What is the capital of France?", answer: "paris" },
+  { question: "What does HTML stand for?", answer: "hypertext markup language" },
+  { question: "What is 5 multiplied by 6?", answer: "30" },
+  { question: "What programming language is used to style web pages?", answer: "css" },
+  { question: "Which company created JavaScript?", answer: "netscape" }
+];
+
+
+function runQuiz() {
+  let score = 0;
+
+  alert("Welcome to the JavaScript Console Quiz!");
+
+  for (let i = 0; i < quiz.length; i++) {
+    let userAnswer = prompt(quiz[i].question);
+
+    (userAnswer becomes null)
+    if (userAnswer === null) {
+      alert("Quiz canceled!");
+      return;
+    }
+
+    userAnswer = userAnswer.trim().toLowerCase();
+
+    if (userAnswer === quiz[i].answer) {
+      alert("Correct! 🎉");
+      score++;
+    } else {
+      alert(`Incorrect. The correct answer is: ${quiz[i].answer}`);
+    }
+  }
+
+  alert(`Quiz complete! Your final score is ${score}/${quiz.length}.`);
+}
+
+Start the quiz
+runQuiz();
